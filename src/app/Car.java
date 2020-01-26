@@ -3,7 +3,7 @@ package app;
 public class Car extends Vehicle {
 
     public Car() {
-        this.normalnSpeed = Helpers.getRandomNumber(80, 110);
+        this.normalSpeed = Helpers.getRandomNumber(80, 110);
         this.name = Helpers.generateCarName();
     }
 

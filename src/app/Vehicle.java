@@ -1,7 +1,7 @@
 package app;
 
 public abstract class Vehicle {
-    int normalnSpeed;
+    int normalSpeed;
     protected String name;
     int distanceTraveled = 0;
 

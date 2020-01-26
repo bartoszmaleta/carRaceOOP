@@ -4,7 +4,7 @@ public class Motorcycle extends Vehicle {
     private static int nameNumber = 1;
 
     public Motorcycle() {
-        normalnSpeed = 100;
+        normalSpeed = 100;
         name = "Motorcycle " + Integer.toString(nameNumber++);
     }
 
