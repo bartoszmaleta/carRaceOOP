@@ -13,16 +13,16 @@ public class Truck extends Vehicle {
         return breakdownTurnsLeft != 0;
     }
 
-    // @Override
-    // public void moveForAnHour(Race race) {
-    //     if (breakdownTurnsLeft == 0) {
-    //         if (Helpers.probability(5)) breakdownTurnsLeft = 2;
-    //         else {
-    //             if (race.isThereABrokenTruck()) distanceTraveled += 75;
-    //             else distanceTraveled += normalSpeed;
-    //         }
-    //     } else {
-    //         breakdownTurnsLeft--;
-    //     }
-    // }
+    @Override
+    public void moveForAnHour(Race race) {
+        if (breakdownTurnsLeft == 0) {
+            if (Helpers.probability(5)) breakdownTurnsLeft = 2;
+            else {
+                if (race.isThereABrokenTruck()) distanceTraveled += 75;
+                else distanceTraveled += normalSpeed;
+            }
+        } else {
+            breakdownTurnsLeft--;
+        }
+    }
 }

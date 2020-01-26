@@ -15,5 +15,5 @@ public abstract class Vehicle {
 
     public abstract boolean isBroken();
 
-    // public abstract void moveForAnHour(Race race);
+    public abstract void moveForAnHour(Race race);
 }
