@@ -13,8 +13,25 @@ public class Motorcycle extends Vehicle {
         return false;
     }
 
-    // @Override
-    // public void moveForAnHour(Race race) {
-        // 
-    // }
+    @Override
+    public void moveForAnHour(Race race) {
+        if (Weather.isRaining()) {
+            int newSpeed = normalSpeed - Helpers.getRandomNumber(5, 50);
+            if (race.isThereABrokenTruck()) {
+                if (newSpeed >= 75) {
+                    distanceTraveled += 75;
+                } else {
+                    distanceTraveled += newSpeed;
+                }
+            } else {
+                distanceTraveled -= newSpeed;
+            }
+        } else {
+            if (race.isThereABrokenTruck()) {
+                distanceTraveled += 75;
+            } else {
+                distanceTraveled += normalSpeed;
+            }
+        }       
+    }
 }
