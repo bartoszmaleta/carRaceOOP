@@ -13,7 +13,7 @@ public class Helpers {
 
     // String file = "src/resources/names.txt";
     static {
-        String file = "names.txt";
+        String file = "resources/names.txt";
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String line;
             while ((line = br.readLine()) != null) {
