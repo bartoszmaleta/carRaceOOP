@@ -12,9 +12,17 @@ public class Car extends Vehicle {
         return false;
     }
 
-    // @Override
-    // public void moveForAnHour(Race race) {
-        // 
-    // }
+    @Override
+    public void moveForAnHour(Race race) {
+        if (race.isThereABrokenTruck()) {
+            if (normalSpeed >= 75) {
+                distanceTraveled += 75;
+            } else {
+                distanceTraveled += normalSpeed;
+            }
+        } else {
+            distanceTraveled += normalSpeed;
+        }
+    }
 
 }
